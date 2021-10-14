@@ -1,0 +1,31 @@
+{
+  "env": {
+      "browser": true,
+      "es2017": true,
+      "es6": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+      "ecmaVersion": 2019,
+      "sourceType": "module"
+  },
+  "extends": [
+      "eslint:recommended"
+  ],
+  "plugins": [
+      "svelte3"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "**/*.svelte"
+      ],
+      "processor": "svelte3/svelte3"
+    }
+  ],
+  "ignorePatterns": ["build/"],
+  "rules": {
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "no-case-declarations": "off"
+  }
+}
