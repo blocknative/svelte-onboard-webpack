@@ -1,7 +1,6 @@
 /* eslint-env node */
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
 const PreloadWebpackPlugin = require('@vue/preload-webpack-plugin');
 
 const path = require('path')
@@ -66,9 +65,6 @@ module.exports = env => {
     },
     mode,
     plugins: [
-      new CopyWebpackPlugin({
-        patterns: [{ from: 'public', to: '' }]
-      }),
       new HtmlWebpackPlugin({
         template: 'src/template.html',
         scriptLoading: 'defer'
